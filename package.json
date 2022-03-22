@@ -1,0 +1,17 @@
+{
+  "name": "html-css-basics",
+  "version": "1.0.0",
+  "description": "Starter project for HTML + CSS Basics course",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
