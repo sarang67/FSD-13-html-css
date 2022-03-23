@@ -1,0 +1,29 @@
+5-_HTML_Basics --> what is html 
+6-_CSS_Basics --> what is css how to apply
+---------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic of HTML and CSS</title>
+    <style>
+      img {
+        width: 100px;
+        border: 1px solid red;
+        border-radius: 50px;
+        float: left;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+      alt="google logo"
+    />
+    <p>Sarang Jain</p>
+    <p>I love the teaching</p>
+  </body>
+</html>
