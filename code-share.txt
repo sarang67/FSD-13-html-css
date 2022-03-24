@@ -27,3 +27,265 @@
     <p>I love the teaching</p>
   </body>
 </html>
+
+
+2-_The_Head_Section
+======================
+meta tah is give more information about this webpage , for using meta tag we can give more information about web page.
+
+keywords ---> for seo purpose when someone searches
+description --> it shows the description 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+3-_Text and heading text
+========================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>HTMl</h1>
+    <p>This is section about HTML tutoriul.</p>
+    <h2>CSS</h2>
+    <p>This is section about CSS tutoriul.</p>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <p>
+      This is some text in a <em>paragraph</em>.
+      <i>one</i>
+      <strong>Two</strong> <b>Three</b>
+    </p>
+  </body>
+</html>
+
+4-_Entities :- some reservered keyword &code;
+==============
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>This is some text in a &lt;paragraph&gt;. &copy;</p>
+  </body>
+</html>
+
+5-_Hyperlinks
+===============
+index.html
+---------
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <a href="https://www.google.com/">Google</a> <br />
+    <a href="/pages/about.html">go to about page</a><br />
+    <a href="mailto:sarang.jain67@gmail.com">email to me</a><br />
+    <a href="./images/google.png">Google image</a><br />
+    <a href="./images/google.png" download> image download</a><br />
+  </body>
+</html>
+
+
+pages\about.html
+---------------
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About page</title>
+  </head>
+  <body>
+    <h1>About Page</h1>
+    <a href="../index.html">go to index page</a>
+  </body>
+</html>
+
+
+6-_Images
+=========
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="/images/google.png" alt="this is google image" />
+  </body>
+</html>
+
+
+7-_Video_and_Audio
+========================
+Download vidio from https://www.pexels.com/
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <style>
+      video {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <video src="/vidio/nowar.mp4" controls loop autoplay>
+      Your browser does not support Vidio Please upgrade it
+    </video>
+  </body>
+</html>
+
+8-_Lists
+==========
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <style>
+      video {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Milk</li>
+      <li>
+        Cheese
+        <ul>
+          <li>Blue cheese</li>
+          <li>Feta</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>Recipie:</p>
+    <ol>
+      <li>Mix flour, baking powder, sugar, and salt.</li>
+      <li>In another bowl, mix eggs, milk, and oil.</li>
+      <li>Stir both mixtures together.</li>
+      <li>Fill muffin tray 3/4 full.</li>
+      <li>Bake for 20 minutes.</li>
+    </ol>
+
+    <p>Cryptids of Cornwall:</p>
+
+    <dl>
+      <dt>HtML</dt>
+      <dd>for structure</dd>
+
+      <dt>CSS</dt>
+      <dd>For styling</dd>
+
+      <dt>JAvascript</dt>
+      <dd>For functinality</dd>
+    </dl>
+  </body>
+</html>
+
+
+9-_Tables
+==========
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid gray;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Items</th>
+          <th>Expenditure</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Donuts</td>
+          <td>3,000</td>
+        </tr>
+        <tr>
+          <td>Stationery</td>
+          <td>18,000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Totals</th>
+          <th>21,000</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
