@@ -289,3 +289,257 @@ Download vidio from https://www.pexels.com/
     </table>
   </body>
 </html>
+
+10-_Containers or inline element
+===============
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <style>
+      div {
+        background: gold;
+      }
+      .highlight {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
+      suscipit cum, odit eos similique quos fugit rem eum eaque magnam quasi
+      veniam, inventore ipsum. Suscipit quidem unde illum et sit.
+    </div>
+    <a href="#">Google.com</a>
+
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
+      suscipit cum, odit eos similique quos fugit rem eum eaque magnam quasi
+      veniam, inventore ipsum. Suscipit quidem unde illum et sit.
+    </div>
+    <a href="#">Google.com</a>
+
+    <div>
+      <span class="highlight">Lorem</span>
+      ipsum dolor sit amet, consectetur adipisicing elit. Temporibus suscipit
+      cum, odit eos similique quos fugit rem eum eaque magnam quasi veniam,
+      inventore ipsum. Suscipit quidem unde illum et sit.
+    </div>
+    <a href="#">Google.com</a>
+  </body>
+</html>
+
+
+11-_Semantic_Elements
+====================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <style>
+      div {
+        background: gold;
+      }
+      .highlight {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>Heading</h1>
+      <p>Published <time>March 24 2022</time></p>
+      <p>
+        <mark>Lorem</mark> ipsum dolor sit amet consectetur adipisicing elit.
+        Esse totam veritatis nobis distinctio? Eveniet sint error sequi quae quo
+        porro, excepturi nemo pariatur fuga adipisci, dolore quas, similique
+        ratione numquam!
+      </p>
+      <figure>
+        <img src="" alt="" />
+        <figurecaption>This is the google logo icon</figurecaption>
+      </figure>
+    </article>
+  </body>
+</html>
+
+
+12-_Structuring_a_Web_Page
+==========================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        main Area
+        <section>
+          Product one
+          <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+            accusamus pariatur quos nisi quas, at labore nostrum laboriosam
+            dolorum praesentium, corrupti eaque earum! Nostrum nam, quam
+            excepturi minus est voluptatibus?
+          </article>
+        </section>
+        <section>
+          Product two
+          <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+            accusamus pariatur quos nisi quas, at labore nostrum laboriosam
+            dolorum praesentium, corrupti eaque earum! Nostrum nam, quam
+            excepturi minus est voluptatibus?
+          </article>
+        </section>
+      </article>
+    </main>
+    <aside></aside>
+    <footer>
+      <nav>
+        <ul>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
+
+
+**********************4.CSS Basics******************
+1-_Introduction
+===============
+css rule and what we will learn in this css basic
+
+2-_Providing_CSS
+==============
+there is 3 ways tto provide style in document.
+
+index.html
+============
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      p {
+        color: black;
+      }
+
+      #first {
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="first">Lorem ipsum dolor sit amet.</p>
+    <p style="color: green; font-weight: bold">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </body>
+</html>
+
+style.css
+--------
+p {
+  color: red;
+}
+
+
+3-_Normalizing_CSS
+==================
+we have multiple browser and they render some of html element diffrently . so if we make our website witht normlize.css our website will be looking not same all the place so we use norm.css for the same.
+
+download from there https://necolas.github.io/normalize.css/ and use it.
+
+4-_Basic_Selectors
+==================
+we can select element using 4 basis selector
+1) type
+2) id
+3) class
+4) attribute
+
+style.css
+==========
+body {
+  margin: 10px;
+}
+
+#products {
+}
+
+.product {
+}
+
+a[target="_blank"] {
+  color: green;
+}
+
+a[href*="google"][href^="https"][href$="com"] {
+  color: blue;
+}
+
+
+index.html
+=========
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section id="products">
+      <article class="product"></article>
+      <article class="product"></article>
+      <article class="product"></article>
+      <article class="product"></article>
+    </section>
+
+    <div>
+      <a href="https://www.google.com" target="_blank">Google</a>
+    </div>
+  </body>
+</html>
+

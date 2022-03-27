@@ -1,0 +1,19 @@
+body {
+  margin: 10px;
+}
+
+#products {
+  /* color: red; */
+}
+
+.product {
+  color: deeppink;
+}
+
+.tshirt {
+  color: blue;
+}
+
+a {
+  color: red;
+}

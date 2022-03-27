@@ -7,44 +7,18 @@
     <meta name="keywords" content="HTML,CSS" />
     <meta name="description" content="this is web page for learning" />
     <title>Document</title>
-    <style>
-      table,
-      td {
-        border: 1px solid black;
-        border-collapse: collapse;
-      }
-
-      /* td {
-        border: 1px solid black;
-      } */
-    </style>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <table>
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Expenditure</th>
-        </tr>
-      </thead>
+    <section id="products">
+      These are the products
+      <article class="product tshirt">Tshirt</article>
+      <article class="product jeans">Jeans</article>
+      <article class="product mobile">Mobile</article>
+      <article class="product tables">tablet</article>
 
-      <tbody>
-        <tr>
-          <td>Donuts</td>
-          <td>30000</td>
-        </tr>
-        <tr>
-          <td>pizza</td>
-          <td>5000</td>
-        </tr>
-      </tbody>
-
-      <tfoot>
-        <tr>
-          <th>Total amount</th>
-          <th>8000</th>
-        </tr>
-      </tfoot>
-    </table>
+      <a href="https://www.google.com" target="_blank">Google</a>
+    </section>
   </body>
 </html>
