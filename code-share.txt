@@ -543,3 +543,313 @@ index.html
   </body>
 </html>
 
+
+
+5-_Relational_Selectors
+===========================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section id="products">
+      <p>Lorem ipsum dolor sit amet.</p>
+
+      <article id="products">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </article>
+    </section>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </body>
+</html>
+
+ 
+style.css
+==========
+body {
+  margin: 10px;
+}
+
+#products p {
+  color: orange;
+}
+
+#products + p {
+  color: orange;
+}
+
+#products ~ p {
+  color: orange;
+}
+
+
+6-_Pseudo-class_Selectors
+===========================
+pseudo classes are not real classes what we define , pseudo classes are bunch of classes which is applied by browser by default .
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <article>
+      <h1>Heading</h1>
+      <p class="first">Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <a href="http://anylink.com">anyLink</a>
+    </article>
+
+    <section>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </section>
+  </body>
+</html>
+
+style.css
+=========
+body {
+  margin: 10px;
+}
+
+/* article .first {
+  color: deeppink;
+  font-style: italic;
+} */
+
+article :first-child {
+  color: deeppink;
+  font-style: italic;
+}
+
+/* article :first-of-type {
+  color: deeppink;
+  font-style: italic;
+} */
+
+article :last-child {
+  color: deepskyblue;
+  font-style: italic;
+}
+
+article :last-of-type {
+  color: deepskyblue;
+  font-style: italic;
+}
+
+li:nth-child(odd) {
+  color: deepskyblue;
+}
+
+li:nth-child(even) {
+  color: gold;
+}
+
+li:nth-child(3n) {
+  color: blue;
+}
+
+a:link {
+  color: aqua;
+}
+
+a:visited {
+  color: red;
+}
+
+a:hover,
+a:focus {
+  color: greenyellow;
+}
+
+
+7-_Pseudo-element_Selectors
+==========================
+
+Pseudo-element :- To style part of element  for ex: first letter
+Pseudo-classes :- To style element in a perticular state ex: a:visited
+
+index.html
+============
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section>
+      <header>Heading</header>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad adipisci
+        fugit deserunt voluptas. Molestiae tempore debitis voluptate quibusdam
+        pariatur veritatis atque nihil, accusantium nobis quidem dolores harum
+        culpa, incidunt eum. Nisi accusamus facilis commodi omnis quam itaque
+        vel consequatur perspiciatis,
+      </p>
+    </section>
+  </body>
+</html>
+
+
+style.css
+=========
+body {
+  margin: 10px;
+}
+
+p::first-letter {
+  font-size: 140%;
+  font-weight: bold;
+}
+
+p::first-line {
+  color: deepskyblue;
+}
+
+p::before {
+  content: "...";
+  display: block;
+}
+
+p::after {
+  content: "***";
+}
+
+
+8-_Selectors_Specificty
+=======================
+css apis applied to element using specifity
+rule goes to 1) id selector 2) class & attribute selector 3) element selector
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <article id="test">
+      <h1 class="highlights" id="products">Heading</h1>
+    </article>
+  </body>
+</html>
+
+
+style.css
+----------
+h1 {
+  color: red;
+  /*   color: red !important;  */
+}
+
+.highlights {
+  color: green;
+}
+
+#products {
+  color: yellow;
+}
+
+article #products {
+  color: green;
+}
+
+#test #products {
+  color: gray;
+}
+
+
+
+9-_Inheritance
+=================
+in css some propety by default inherit values from the parent. some css property not all the property always remember these are font color related property.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <p>Lorem ipsum <strong>dolor</strong> sit amet.</p>
+  </body>
+</html>
+
+
+p {
+  color: red;
+  border: 1px solid green;
+}
+
+strong {
+  color: initial;  // make the initial clolor menas by default color dont inherit from parent
+  border: inherit;  // do border style inherit from the parent
+}
+ 
+
+10-_Colors
+===========
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+style.css
+==========
+.box {
+  height: 200px;
+  width: 200px;
+  background-color: #fbfb1380;
+}
