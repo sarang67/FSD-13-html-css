@@ -1157,3 +1157,201 @@ blur radius) determines the softness of the border. We can specify the color as 
 value.
 
 */
+
+******************************* Advance-CSS- *******************
+
+*************2.Layout*******************
+
+2-_The_Box_Model
+==============
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </body>
+</html>
+
+
+style.css
+-----------
+p {
+  padding: 10px 20px 10px 20px;
+  border: 5px solid gold;
+}
+
+/*
+  p {
+  padding: 20px
+  margin: 0
+}
+
+  p {
+  padding:0
+  margin: 20px 
+}
+
+*/
+
+3-_Sizing_Elements
+==================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="box">Hello</div>
+    <div class="box">world</div>
+  </body>
+</html>
+
+style.css
+-----------
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  // padding:20px;
+  // border:10px solid orange;
+  box-sizing: content-box/border-box
+}
+
+** --> width and hesight property only applied on block level element.
+.box {
+  width: 100px;  
+  height: 100px;
+  background-color: gold;
+  /* display: block;  */
+  /* display: inline;  */
+  /* display: inline-block;  */
+}
+
+4-_Overflowing
+==============
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cum
+      consectetur vero blanditiis eum assumenda quisquam accusamus dolorem,
+      nulla minima provident nisi voluptatibus fugit mollitia! Ipsa ut ipsum
+      neque quam optio quibusdam, natus porro vitae ullam sunt, repellat iure ad
+      quae veritatis dolorum dignissimos? Dolorem exercitationem ducimus
+      deleniti corporis sint?
+    </div>
+  </body>
+</html>
+
+
+style.css
+---------
+.box {
+  border: 3px solid gold;
+  width: 150px;
+  height: 150px;
+  overflow: visible;
+  overflow: hidden;
+  overflow: scroll;
+  overflow: auto;
+  overflow: scroll hidden;
+}
+
+
+5-_Measurement_Units
+====================== 	
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+
+style.css
+---------
+html {
+  /* 62.5% of 16px = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  margin: 10px;
+  /* width: 300px; */
+}
+
+.box {
+  border-top: 3px solid red;
+  background-color: gold;
+  width: 100px;
+  /* height: 100px; */
+  width: 50%;
+  /* height: 100%; */
+  /* viewport hesight 100vh means 100% hesight of viewport hesight*/
+  height: 100vh;
+  width: 50vw;
+  /* when we have to adjust layout accrding to font size we use this em and rem unit */
+
+  /*10x font size of the current element */
+  width: 10em; /* 10 x 16px = 160px*/
+  font-size: 20px;
+
+  /*10x font size of the root element means html (by default is 16px) , here we dont need to remeber hirechi */
+  width: 10rem; /* 10 x 16px = 160px*/
+}
+
+.box {
+  width: 15rem;
+  height: 100vh;
+  background-color: gold;
+  border-top: 3px solid green;
+}

@@ -1,0 +1,22 @@
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.box-one {
+  background: red;
+  z-index: 2;
+  position: relative;
+}
+
+.box-two {
+  background: yellow;
+  position: relative;
+  left: 30px;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.box-three {
+  background: green;
+}
