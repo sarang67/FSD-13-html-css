@@ -1355,3 +1355,242 @@ body {
   background-color: gold;
   border-top: 3px solid green;
 }
+
+
+6-_Positioning
+===============
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="boxes">
+      <div class="box box-one"></div>
+      <div class="box box-two"></div>
+      <div class="box box-three"></div>
+    </div>
+  </body>
+</html>
+
+
+style.css
+----------
+body {
+  height: 200vh;
+}
+
+.boxes {
+  border: 4px solid gray;
+}
+
+.box {
+  width: 10rem;
+  height: 10rem;
+}
+
+.box-one {
+  background: red;
+  /* z-index: 2; */
+  /* position: relative; */
+}
+
+.box-two {
+  background: yellow;
+  /* relative means , we can move an element relative to its normal postion and it does not impact to other element*/
+  position: relative;
+  /* left: 4rem;
+  bottom: 4rem; */
+  /* z-index: 1; */
+ 
+ /*we have absolute position means , we can move to element with respect to any parent element , if we dont use postion relative to its parent then by default out aboslute position will be relative to its viewport*/
+  /*important point abolute poistion element leave the natural flow , it will be traeted as a seprate layes for that is why boxes is treating that there is no more box2 after applying absolute  */
+  position: absolute;
+  /* right: 0;
+  bottom: 0; */
+  
+  /* fixed means element will be positioned with respect to view port*/
+  position: fixed;
+  /* top: 0;
+  left: 50%; */
+  
+  /* set size using left and right */
+  top: 0;
+  left: 5rem;
+  right: 5rem;
+  width: auto;
+}
+
+.box-three {
+  background: green;
+}
+
+
+
+7-_Floating_Elements / issue of parent collapsing // clear float fix
+=====================================================================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <article class="tweet clearfix">
+      <div class="avatar"></div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <!-- <p class="clear">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo obcaecati
+        necessitatibus molestiae praesentium recusandae, laudantium deserunt
+        vero maxime iure quae voluptatum delectus illo, amet ducimus. Esse,
+        iusto modi placeat velit ipsum doloremque quaerat facilis odit deleniti
+        dolore at. Magnam aspernatur quos velit nihil facilis et tenetur dolor
+        eaque ea illum.
+      </p> -->
+      <!-- <div class="clear"></div> -->
+    </article>
+  </body>
+</html>
+
+
+style.css
+----------
+
+.tweet {
+  border: 3px solid lightgray;
+}
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  background-color: gold;
+  float: left;
+  margin-right: 0.5rem;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+8-_FlexBox
+============
+align item  (these are container property)
+----------
+Justify-content --> (along to main axis)
+Align-item 		--> (along to cross axis)
+
+align-content --> this property only works when we have multiple lines in our container 
+flex-wrap --> to allow item to wrap into a new line if they are too large
+
+Sizing items  ((these are container item property)
+-------------
+flex-basis (the initial size of flex item , it will decide the width and height of item based on the flex-direction)
+flex-grow  (the growth factor)
+flex-shrink (the shrink factor)
+flex --> this would be the shorthand propert for above 3 property
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box-one">A</div>
+      <div class="box box-two">B</div>
+      <div class="box box-three">C</div>
+    </div>
+  </body>
+</html>
+
+style.css
+----------
+.container {
+  border: 3px solid lightgray;
+  display: flex;
+
+  flex-direction: row;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  flex-direction: row-reverse;
+  flex-direction: row;
+
+  /* Justify-content --> (along to main axis or x axix) */
+
+  justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: center;
+  justify-content: space-evenly;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: center;
+
+  /* Align-item 		--> (along to cross axis or Y axix) */
+  align-items: flex-start;
+  align-items: flex-end;
+  height: 90vh;
+  align-items: center;
+
+  /* align-content --> this property only works when we have multiple lines in our container  */
+  /*flex-wrap --> to allow item to wrap into a new line if they are too large */
+  /* flex-wrap: wrap; */
+  /* align-content: center; */
+}
+
+.box {
+  width: 5rem;
+  height: 5rem;
+  background: gold;
+  margin: 1rem;
+
+  flex-basis: auto;
+  /* this will overwrite width property, becase we have set flex-direction row so its overwriting the width, if we would have set flex-direction column then it would have overwritten the height*/
+  /* flex-basis: 10rem; */
+  flex-basis: 5rem;
+
+  /* flex-grwoth will determine the growth of flex item, means here how our flex container items will use the space*/
+  /* flex-grow: 1; */
+
+  /* flex-shrink which is the apposite of flex-grow , it tells the browser how the element should shring if there is no enough space*/
+
+  flex-basis: 15rem;
+  flex-shrink: 1;
+}
+
+.box-one {
+  /*overwrite align-item for box one */
+  /* align-self: flex-end; */
+
+  /* flex-basis: 5rem; */
+  /* flex-grow: 0; */
+  /* flex-grow: 2; */
+
+  flex-shrink: 0;
+}
