@@ -1594,3 +1594,393 @@ style.css
 
   flex-shrink: 0;
 }
+
+
+9-_Hiding_Elements
+====================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="boxes">
+      <p class="first">First pera</p>
+      <p>Second pera</p>
+    </div>
+  </body>
+</html>
+
+
+style.css
+----------
+.first {
+  /* display: none; */
+  visibility: hidden;
+}
+
+
+10-_Media_Queries
+===================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box-one">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+          voluptatibus aliquid excepturi magnam nulla illum doloremque autem
+          alias perspiciatis. Debitis, odit? Earum necessitatibus dignissimos
+          itaque, consectetur deserunt architecto magnam provident.
+        </p>
+      </div>
+      <div class="box box-two">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
+          ipsum id nobis aperiam tempora dignissimos deleniti eligendi
+          voluptatem adipisci. Quod quo sed inventore nulla ratione. Voluptate
+          et harum tenetur dolorem?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+style.css
+----------
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  padding: 1rem;
+}
+
+.box-one {
+  background: gold;
+}
+
+.box-two {
+  background: blue;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .box-one {
+    background: white;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .box-two {
+    background: white;
+  }
+}
+
+@media print {
+  body {
+    font-size: 30pt;
+    color: red;
+  }
+
+  .box {
+    padding: 0.5cm;
+  }
+}
+
+
+@media screen and (min-width: 600px) and (max-width : 900px) {
+   // apply rule for 600 to 900px
+}
+
+
+*********************Typography************************
+
+1-_Introduction
+==============
+Art of creating easy and beutiful text. here we will learn
+--> styling fonts
+--> embedding custom fonts
+--> using font services
+--> best practices for text size & spacing
+--> formatting text
+
+
+2-_Styling_Fonts (web safe fonts)
+==================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi impedit
+      dolore vel optio enim qui omnis corporis non. Doloribus, porro tempora.
+      Tempora iste possimus delectus cum, eveniet incidunt dolorum dolores
+      nostrum explicabo, quo dolorem praesentium voluptatibus laudantium earum
+      inventore ex sunt quas enim deserunt nisi. Numquam facilis aliquam ea
+      quidem!
+    </p>
+    <a href="google.com">Google</a>
+  </body>
+</html>
+
+style.css
+---------
+body {
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1rem;
+  color: gray;
+}
+
+a {
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+3-_Embedding_Web_Fonts
+======================
+https://www.fontsquirrel.com/
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi impedit
+      dolore vel optio enim qui omnis corporis non. Doloribus, porro tempora.
+      Tempora iste possimus delectus cum, eveniet incidunt dolorum dolores
+      nostrum explicabo, quo dolorem praesentium voluptatibus laudantium earum
+      inventore ex sunt quas enim deserunt nisi. Numquam facilis aliquam ea
+      quidem!
+    </p>
+    <a href="google.com">Google</a>
+  </body>
+</html>
+
+style.css
+-----------
+@font-face {
+  font-family: "sansbold";
+  src: url("./fonts/opensans-bold-webfont.woff2") format("woff2"),
+    url("./fonts/opensans-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sansregular";
+  src: url("./fonts/opensans-regular-webfont.woff2") format("woff2"),
+    url("./fonts/opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 10px;
+  font-family: "sansregular", Arial, Helvetica, sans-serif;
+}
+
+p {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1rem;
+  color: gray;
+}
+
+a {
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+h1 {
+  font-family: "sansbold", "Times New Roman", Times, serif;
+}
+
+
+4-_Font_Services
+===============
+we can use font services , where we wont keep custom font with our server , we will use it from googlw or other services we can check  the googlefont size , and we can include link from there and we can use inside our website. on the top of head section
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi impedit
+      dolore vel optio enim qui omnis corporis non. Doloribus, porro tempora.
+      Tempora iste possimus delectus cum, eveniet incidunt dolorum dolores
+      nostrum explicabo, quo dolorem praesentium voluptatibus laudantium earum
+      inventore ex sunt quas enim deserunt nisi. Numquam facilis aliquam ea
+      quidem!
+    </p>
+    <a href="google.com">Google</a>
+  </body>
+</html>
+
+5-_System_Font_Stack
+=====================
+suppose now a days our operationg system has modern and diffrent font family , suppose you are using old mac os that is diffrent , and new mac that is diffrent new windows os that is diffrent , and android is diffrent. so if you want to show default font as per operationg system you can use below style , so what is the below style will take if this is apple machine will apply font fo apple in case this is windows machine will apply Segoe UI, an in case of android will apply Roboto.
+
+so now you have question what is web safe fonts , these are older , which are  common and sitting each system since 20 year , system font stack is diffrent when its come to web safe fonts stack , they are more modern tyhan.
+
+
+body {
+  margin: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+6-_Sizing_Fonts
+===============
+always give your font size in rem en whichever element you are applying font-size, that can be manage better for all the screen than px .  because px is not same across all the devices specially in mac.
+so always recommended to set the font-size in rem instead of pixcel.
+
+
+body {
+  margin: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	/* 1 x font size of the root element(html elem) ==>  1rem = 16px * 1 = 16px  */
+  font-size: 1rem;
+}
+
+7-_Vertical_Spacing
+==================
+No change in html
+line-height property
+
+style.css
+-----------
+body {
+  margin: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+
+8-_Horizontal_Spacing
+==================
+No change in html 
+will see propery (word-spacing ,letter-spacing  , width is ch (character))
+
+body {
+  margin: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  /* word-spacing: 2px;
+  letter-spacing: 5px; */
+}
+
+p {
+  /* ch means character unit another relative unit in css */
+  width: 50ch;
+}
+
+
+9-_Formatting_Text
+===================
+No change in html
+
+text related property.
+
+p {
+  /* ch means character unit another relative unit in css */
+  width: 50ch;
+
+  /* text-align: right;
+  text-align: center;
+  text-align: left; */
+
+  /* text-indent: 1rem; */
+  /* text-decoration: underline;
+  text-decoration: line-through; */
+
+  /* text-transform: capitalize;
+  text-transform: uppercase;
+  text-transform: lowercase; */
+
+  /* white-space: nowrap;
+  border: 3px solid gold;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+
+  direction: rtl;
+}
+
+
+
