@@ -2473,3 +2473,637 @@ Some comments goes there...</textarea
 
 
 
+11-_Grouping_Related_Fields
+==========================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Choose your favorite monster</legend>
+        <input type="radio" id="kraken" name="monster" />
+        <label for="kraken">Kraken</label><br />
+        <input type="radio" id="sasquatch" name="monster" />
+        <label for="sasquatch">Sasquatch</label><br />
+        <input type="radio" id="mothman" name="monster" />
+        <label for="mothman">Mothman</label>
+      </fieldset>
+    </form>
+  </body>
+</html>
+
+
+12-_Hidden_Fields
+=================== 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <form><input type="hidden" id="postId" name="postId" /></form>
+  </body>
+</html>
+
+
+13-_Data_Validation (inbuild basic validation , we need more validation using javascript)
+==================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <form>
+      <input type="text" required minlength="2" maxlength="5" />
+      <input type="email" required minlength="2" maxlength="5" />
+      <input type="date" required minlength="2" maxlength="5" />
+      <input type="number" name="" id="" min="0" max="10" />
+      <input type="submit" value="submit form" />
+    </form>
+  </body>
+</html>
+
+
+14-_Submitting_the_Form
+========================
+--> check free service for form handeling https://formspree.io/
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <form action="https://formspree.io/f/xnqwoejz" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email" />
+      </label>
+      <label>
+        Your message:
+        <textarea name="message"></textarea>
+      </label>
+      <!-- your other form fields go here -->
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>
+
+Transformations, Transitions, and Animations
+*********************************************
+
+1-_Transformations
+====================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </div>
+  </body>
+</html>
+
+style.css
+--------
+body {
+  padding: 1rem;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box:hover {
+  transform: rotate(15deg);
+  transform: rotate(-15deg);
+  transform: scale(1.5);
+  transform: scale(0.5);
+  transform: skew(15deg);
+  transform: skew(-15deg);
+  transform: translate(10px);
+  transform: translate(-10px);
+  transform: translate(10px, 20px);
+  transform: translate(10px, -20px);
+  transform: rotate(45deg) translateX(50px) translateY(10px);
+  transform: translateX(50px) translateY(10px) rotate(45deg);
+}
+
+
+2-_Transitions
+==============
+body {
+  padding: 1rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: gold;
+  transition: transform 05s 2s;
+}
+
+.box:hover {
+  transform: rotate(45deg);
+}
+
+
+3-_Animations
+==================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </div>
+  </body>
+</html>
+
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.3);
+  }
+
+  50% {
+    background: red;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+body {
+  padding: 1rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: gold;
+  animation-name: pop;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+
+4-_Reusable_Animations
+====================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="box animation-pop">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </div>
+  </body>
+</html>
+
+style.css
+========
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.3);
+  }
+
+  50% {
+    background: red;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+body {
+  padding: 1rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.animation-pop {
+  animation-name: pop;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+
+
+*****************Writing Clean, Maintainable CSS ********************
+
+1-_Variables
+===================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div>
+      <p class="one">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper
+        diam at erat pulvinar, at pulvinar felis blandit.
+      </p>
+      <p class="two">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper
+        diam at erat pulvinar, at pulvinar felis blandit.
+      </p>
+    </div>
+  </body>
+</html>
+
+
+style.css
+---------
+:root {
+  --blue: #6495ed;
+  --white: #faf0e6;
+}
+
+.one {
+  color: var(--blue);
+}
+
+.two {
+  background-color: var(--blue);
+}
+
+
+
+******************Images**********************
+
+2-_Image_Types_and_Formats
+=======================
+theroy from word
+
+3-_Content_Images
+===============
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <img src="images/meal.jpg" alt="a bowl of curry" class="meal" />
+    <!-- <img src="images/line.jpg" alt="" /> -->
+  </body>
+</html>
+
+body {
+  padding: 1rem;
+}
+
+.meal {
+  width: 100vw;
+}
+
+
+3-_Background_Images
+===================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h1>My Heading</h1>
+  </body>
+</html>
+
+
+body {
+  height: 300vh;
+  /*
+  background: url(../images/bg-paper.jpg);
+   background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+  background-position: 100px 100px;
+  background-position: -100px 100px;
+  background-position: 100% 100px;
+  background-size: 200px 200px;
+  background-size: 100% 100%; 
+  background: url(../images/bg-paper@2x.jpg); 
+  background-size: cover;
+  */
+
+  background: url(../images/bg-sanfrancisco.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.meal {
+  width: 100vw;
+}
+
+
+4-_CSS_Sprites
+==============
+https://www.toptal.com/developers/css/sprite-generator/
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- <img src="images/dishes.png" alt="" />
+    <img src="images/landing.png" alt="" />
+    <img src="images/rocketship.png" alt="" />
+    <img src="images/saturn.png" alt="" />
+    <img src="images/ufo.png" alt="" /> -->
+
+    <span class="bg-dishes"></span>
+    <span class="bg-landing"></span>
+    <span class="bg-rocketship"></span>
+    <span class="bg-saturn"></span>
+    <span class="bg-ufo"></span>
+  </body>
+</html>
+
+
+style.css
+----------
+body {
+  height: 300vh;
+}
+
+.bg-dishes {
+  width: 100px;
+  height: 100px;
+  background: url("../images/css_sprites.png") -10px -10px;
+  display: inline-block;
+}
+
+.bg-landing {
+  width: 100px;
+  height: 100px;
+  background: url("../images/css_sprites.png") -130px -10px;
+  display: inline-block;
+}
+
+.bg-rocketship {
+  width: 100px;
+  height: 100px;
+  background: url("../images/css_sprites.png") -10px -130px;
+  display: inline-block;
+}
+
+.bg-saturn {
+  width: 100px;
+  height: 100px;
+  background: url("../images/css_sprites.png") -130px -130px;
+  display: inline-block;
+}
+
+.bg-ufo {
+  width: 100px;
+  height: 100px;
+  background: url("../images/css_sprites.png") -250px -10px;
+  display: inline-block;
+}
+
+
+5-_Clipping
+==========
+search on google --> css clip generator
+https://bennettfeely.com/clippy/
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <img src="./images/meal.jpg" alt="" class="meal" />
+  </body>
+</html>
+
+
+.meal {
+  clip-path: polygon(
+    0% 20%,
+    60% 20%,
+    60% 0%,
+    100% 50%,
+    60% 100%,
+    60% 80%,
+    0% 80%
+  );
+}
+
+6-_Filters
+===========
+all list fo filter 
+https://developer.mozilla.org/en-US/docs/Web/CSS/filter
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <img src="./images/meal.jpg" alt="" class="meal" />
+  </body>
+</html>
+
+
+.meal {
+  filter: grayscale(80%) blur(5px);
+}
+
+
+
+7-_Supporting_High-density_Screens
+================================
+svgbackground.com
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="description" content="this is web page for learning" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <img src="./images/ufo.svg" alt="" class="ufo" />
+  </body>
+</html>
+
+
+
+.ufo {
+  width: 100px;
+}
+
+body {
+  background: url(../images/constellation.svg);
+}
+

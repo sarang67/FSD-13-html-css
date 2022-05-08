@@ -1,3 +1,11 @@
+.ufo1 {
+  width: 500px;
+}
+
+.ufo2 {
+  width: 500px;
+}
+
 body {
-  padding: 1rem;
+  background: url("../images/constellation.svg");
 }
